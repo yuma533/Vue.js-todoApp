@@ -7,8 +7,7 @@
                 newTitle:'',
                 newDate: '',
                 newDetail: '',
-                todos:[{
-                    id: id++, title:'ha?'}]
+                todos:[]
             }
         },
         methods: {
