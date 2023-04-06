@@ -1,14 +1,14 @@
 <script>
-import TodoApp from './components/Todo.vue'
+import todoView from './View/todoView.vue';
 
 export default {
 	  components: {
-	    TodoApp
+	    todoView
 	  }
 	}
 </script>
 
 
 <template>
-  <TodoApp />
+  <todoView />
 </template>

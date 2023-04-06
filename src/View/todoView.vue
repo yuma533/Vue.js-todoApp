@@ -1,5 +1,5 @@
 <script>
-
+import TitleComponent from '../components/TitleComponent.vue'
     let id =0
 
     export default{
@@ -21,12 +21,22 @@
             removeTodo(todo) {
                 this.todos = this.todos.filter((t) => t!==todo)
             }
+        },
+        components: {
+            TitleComponent
+        },
+        data() {
+            return {
+            title: 'TodoList'
+            }
         }
+
     }
 
 </script>
 
 <template>
+    <TitleComponent>title: {{ title }}</TitleComponent>
     <form @submit.prevent="addTodo">
         <input v-model="newTitle" placeholder="Title">
         <input v-model="newDate" placeholder="Date">
