@@ -1,11 +1,11 @@
 <!-- <template>
-    <h1>{{ name }}</h1>
+    <h1>{{ text }}</h1>
 </template>
 
 <script>
 export default {
   data: {
-    name: 'yuma'
+    text: '404'
   }
 }
 </script> -->
