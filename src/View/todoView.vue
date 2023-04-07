@@ -1,9 +1,14 @@
 <script>
+    import TitleComponent from '../components/TitleComponent.vue'
     let id =0
 
     export default{
+        components:{
+            TitleComponent
+        },
         data(){
             return{
+                headerTitle: 'todoList',
                 newTitle:'',
                 newDate: '',
                 newDetail: '',
@@ -26,6 +31,7 @@
 </script>
 
 <template>
+    <TitleComponent>title: {{ headerTitle }}</TitleComponent>
     <form @submit.prevent="addTodo">
         <input v-model="newTitle" placeholder="Title">
         <input v-model="newDate" placeholder="Date">

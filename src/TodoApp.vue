@@ -1,17 +1,19 @@
 <script>
 import todoView from './View/todoView.vue';
-import todoViewTitle from './View/todoViewTitle.vue';
 
 export default {
 	  components: {
-	    todoView,
-      todoViewTitle
+      	todoView
 	  }
 	}
 </script>
 
 
 <template>
-  <todoViewTitle />
-  <todoView />
+  <div>
+    <nav>
+      <router-link to="/todoView">todoView</router-link>
+    </nav>
+    <router-view></router-view>
+  </div>
 </template>
