@@ -12,18 +12,26 @@
                 newTitle:'',
                 newDate: '',
                 newDetail: '',
+                newDone:'false',
+                hideObject: 'false',
                 todos:[]
             }
         },
         methods: {
             addTodo() {
-                this.todos.push({id:id++, title: this.newTitle, date: this.newDate, detail: this.newDetail})
+                this.todos.push({id:id++, title: this.newTitle, date: this.newDate, detail: this.newDetail, done: this.newDone})
                 this.newTitle = ''
                 this.newDate =''
                 this.newDetail =''
+                this.newDone ='false'
             },
             removeTodo(todo) {
                 this.todos = this.todos.filter((t) => t!==todo)
+            },
+            filteredList(){
+                this.hideCompleted 
+                ?this.todos.filter((t) => t != t.done)
+                :this.todos
             }
         },
     }
@@ -46,4 +54,7 @@
             <button @click="removeTodo(todo)">削除</button>
         </li>
     </ul>
+    <button @click="filteredList">
+
+    </button>
 </template>

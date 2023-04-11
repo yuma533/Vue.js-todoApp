@@ -3,7 +3,7 @@ import todoView from './View/todoView.vue';
 
 export default {
 	  components: {
-      	todoView
+      todoView
 	  }
 	}
 </script>
